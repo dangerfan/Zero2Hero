@@ -23,7 +23,7 @@ int output_file(int fd, struct dbheader_t *dbhdr) {
 
     lseek(fd, 0, SEEK_SET);
 
-    int byteswritten = write(fd, dbhdr, sizeof(struct dbheader_t));
+    write(fd, dbhdr, sizeof(struct dbheader_t));
 
     return STATUS_SUCCESS;
 }	
